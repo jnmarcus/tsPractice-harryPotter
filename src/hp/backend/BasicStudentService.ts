@@ -4,19 +4,21 @@ import faker from "faker";
 
 // const basicStudent: BasicStudent = {} // needed?
 
-interface IRequiredStudentData {
+export interface INewStudent {
   firstName: string;
   lastName: string;
   birthday: Date;
 }
 
-export class basicStudentService {
-  createBasicStudentInfo(data: IRequiredStudentData) {
+export class BasicStudentService {
+  // constructor(private readonly basicStudent: BasicStudent) {}
+  private readonly _basicStudent2: BasicStudent | {} = {};
+  createBasicStudentInfo(data: INewStudent) {
     const uuid = faker.datatype.uuid();
     const basicStudentInfo: BasicStudent = {
       ...data,
-      id: uuid,
-    }
+      id: uuid
+    };
     // post data object => do db things
     // response:
     // on success => return response code and response object

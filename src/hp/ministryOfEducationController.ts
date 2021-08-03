@@ -1,24 +1,26 @@
 // import ministryOfEducationService from "./ministryOfEducationService";
-import {basicStudentService} from "./backend/basicStudentService";
+import {
+  INewStudent,
+  BasicStudentService
+} from "./backend/BasicStudentService";
 
-interface INewStudentRequiredDetails {
-  firstName: string;
-  lastName: string;
-  birthday: Date;
-}
+// interface INewStudentRequiredDetails {
+//   firstName: string;
+//   lastName: string;
+//   birthday: Date;
+// }
 
 const ministryOfEducationController = () => {
   const harryPotter = () => {
-    let hp: INewStudentRequiredDetails = {
+    let hp: INewStudent = {
       firstName: "Harry",
       lastName: "Potter",
       birthday: new Date("07/31/1980")
     };
-    const student = new basicStudentService()
-    return student.createBasicStudentInfo(hp);
+    return new BasicStudentService().createBasicStudentInfo(hp);
   };
 
-  return { harryPotter }
+  return { harryPotter };
 };
 
 export default ministryOfEducationController;
