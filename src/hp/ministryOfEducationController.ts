@@ -23,4 +23,16 @@ const ministryOfEducationController = () => {
   return { harryPotter };
 };
 
-export default ministryOfEducationController;
+class MinistryOfEducationController {
+  constructor(newStudent?: INewStudent) {}
+  // private readonly _basicStudent = new BasicStudentService();
+  private _basicStudent = new BasicStudentService();
+
+  registerNewStudent(newStudent: INewStudent) {
+    const student = this._basicStudent.createBasicStudentInfo(newStudent);
+    console.log("NEW REGISTERED STUDENT = ", student);
+    return student;
+  }
+}
+
+export { ministryOfEducationController, MinistryOfEducationController };

@@ -1,3 +1,5 @@
+import faker from "faker";
+
 export interface BasicStudent {
   id: string;
   firstName: string;
@@ -31,4 +33,15 @@ export interface DetailedStudent extends BasicStudent {
 
 export interface VerboseStudent {
   // all student interfaces (implements? extends?)
+}
+
+export class MockStudent {
+  mockNewStudent() {
+    return {
+      // firstName(): string  => {faker.name.firstName()}
+      firstName: faker.name.firstName(),
+      lastName: faker.name.lastName(),
+      birthday: faker.date.past()
+    };
+  }
 }
