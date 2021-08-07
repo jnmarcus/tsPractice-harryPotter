@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "commonjs",
-    "jsx": "preserve",
+    "module": "es6",
     "esModuleInterop": true,
     "sourceMap": true,
     "allowJs": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
     "rootDir": "src",
+    "outDir": "./dist/",
+    "target": "es5",
     "moduleResolution": "node"
-  }
+  },
+  "include": [
+    "./src/**/*"
+  ]
 }
