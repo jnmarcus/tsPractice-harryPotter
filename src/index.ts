@@ -3,25 +3,29 @@ import foo from "./foo";
 import faker from "faker";
 // import { mockCourse } from "./hp/mockData/mockCourse";
 import { MockStudent } from "./hp/mockData/mockStudent";
-import {ministryOfEducationController, MinistryOfEducationController} from "./hp/ministryOfEducationController";
-
+import {
+  ministryOfEducationController,
+  MinistryOfEducationController
+} from "./hp/ministryOfEducationController";
 import { Student } from "./hp/student";
+import junk from "./hp/junk";
 
 const testUser = user1();
 const bar = foo();
 // const myCourse = mockCourse();
+const myJunk = junk();
 
 const controller = new MinistryOfEducationController();
 
 const hermioneGranger = new Student();
 const hermioneCourses = hermioneGranger.getAllRegisteredCourses("2019");
 
-const createHarryPotter = ministryOfEducationController().harryPotter()
+const createHarryPotter = ministryOfEducationController().harryPotter();
 
 const mockNewStudent = new MockStudent().mockNewStudent();
-console.log('MOCK NEW STUDENT = ', mockNewStudent);
+console.log("MOCK NEW STUDENT = ", mockNewStudent);
 
-controller.registerNewStudent(mockNewStudent)
+controller.registerNewStudent(mockNewStudent);
 
 // won't work unless you create a static method
 // const harryPotterClasses = Student.getAllRegisteredCourses('2019')
