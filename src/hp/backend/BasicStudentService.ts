@@ -1,6 +1,6 @@
 // imports mockStudent?
 import { BasicStudent } from "../mockData/mockStudent";
-import faker from "faker";
+import * as faker from "faker/locale/en";
 
 // const basicStudent: BasicStudent = {} // needed?
 

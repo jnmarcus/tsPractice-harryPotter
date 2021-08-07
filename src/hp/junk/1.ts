@@ -1,5 +1,4 @@
 const axios = require("axios").default;
-
 // https://medium.com/@stubailo/how-to-call-a-graphql-server-with-axios-337a94ad6cf9
 // https://stackoverflow.com/questions/48980380/returning-data-from-axios-api
 
@@ -28,14 +27,11 @@ export const testAxios = () => {
     console.log("AXIOS RESULT = ", result.data);
   });
 };
-// function returnResponse(data) {
-//   return data.data;
-//   }
 
 export const testLookupByLastName = (lastName: string): any => {
   let myResult;
-//  return axios({
-  axios({
+ return axios({
+//   axios({
     url: URL,
     method: "POST",
     data: {

@@ -1,8 +1,8 @@
 // import user1 from "./user";
 // import foo from "./foo";
-// import faker from "faker";
-// import { mockCourse } from "./hp/mockData/mockCourse";
-// import { MockStudent } from "./hp/mockData/mockStudent";
+import * as faker from "faker/locale/en";
+import { mockCourse } from "./hp/mockData/mockCourse";
+import { MockStudent } from "./hp/mockData/mockStudent";
 import {
   ministryOfEducationController,
   MinistryOfEducationController
@@ -15,7 +15,7 @@ const URL = "https://charming-boxer-87.hasura.app/v1/graphql";
 
 // const testUser = user1();
 // const bar = foo();
-// const myCourse = mockCourse();
+const myCourse = mockCourse();
 const myJunk = junk();
 
 const controller = new MinistryOfEducationController();
@@ -25,15 +25,10 @@ const hermioneCourses = hermioneGranger.getAllRegisteredCourses("2019");
 
 const createHarryPotter = ministryOfEducationController().harryPotter();
 
-// const mockNewStudent = new MockStudent().mockNewStudent();
-// console.log("MOCK NEW STUDENT = ", mockNewStudent);
+const mockNewStudent = new MockStudent().mockNewStudent();
+console.log("MOCK NEW STUDENT = ", mockNewStudent);
 
-// controller.registerNewStudent(mockNewStudent);
-
-// won't work unless you create a static method
-// const harryPotterClasses = Student.getAllRegisteredCourses('2019')
-
-// console.log(faker.random.arrayElement(["a", "b", "c"]));
+controller.registerNewStudent(mockNewStudent);
 
 
 

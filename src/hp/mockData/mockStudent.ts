@@ -1,4 +1,4 @@
-import faker from "faker";
+import * as faker from "faker/locale/en";
 
 export interface BasicStudent {
   id: string;
@@ -38,7 +38,6 @@ export interface VerboseStudent {
 export class MockStudent {
   mockNewStudent() {
     return {
-      // firstName(): string  => {faker.name.firstName()}
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       birthday: faker.date.past()

@@ -1,4 +1,4 @@
-import faker from "faker";
+import * as faker from "faker/locale/en";
 
 interface User {
   name: string;

@@ -1,4 +1,4 @@
-import faker from "faker";
+import * as faker from "faker/locale/en";
 
 export type uuid = string;
 

@@ -1,4 +1,6 @@
-import { testAxios, test2, test3, testLookupByLastName } from "./1";
+import {
+  testAxios,
+  testLookupByLastName } from "./1";
 
 const junk = () => {
   const axiosTest = testAxios();
@@ -7,6 +9,11 @@ const junk = () => {
   // console.log("TEST2 = ", test2);
 
   console.log("LOOKED UP STUDENT = ", lookUpStudent);
+  return {
+    axiosTest,
+    lookUpStudent,
+
+  }
 };
 
 export default junk;
