@@ -1,4 +1,4 @@
-import faker from "faker";
+import * as faker from "faker/locale/en";
 
 interface CourseMeta {
   id: string;
@@ -43,4 +43,6 @@ const mockCourse = (): CourseMeta => {
   };
 };
 
-export {mockCourse, CourseMeta} ;
+export {
+  mockCourse,
+  CourseMeta} ;
