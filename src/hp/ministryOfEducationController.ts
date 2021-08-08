@@ -1,10 +1,13 @@
-// import ministryOfEducationService from "./ministryOfEducationService";
+// import MinistryOfEducationService from "./ministryOfEducationService";
 import {
   INewStudent,
   BasicStudentService
 } from "./backend/BasicStudentService";
 
+import { IQuery, gQlGetterService } from "./utils/gQLConnectionService";
+
 import errorHandler from "./utils/errorHandler";
+import {MinistryOfEducationService} from "src/hp/ministryOfEducationService";
 const axios = require("axios").default;
 const HP_CONFIG = require("../hp.config");
 
@@ -31,6 +34,7 @@ class MinistryOfEducationController {
   constructor(newStudent?: INewStudent) {}
   // private readonly _basicStudent = new BasicStudentService();
   private _basicStudent = new BasicStudentService();
+  // private _edu = new MinistryOfEducationService();
   private _gqlResponse = {};
 
   private async _parseResponse(result: any) {
@@ -46,16 +50,18 @@ class MinistryOfEducationController {
     document.getElementById('myPre').innerHTML = `${f}`;
   }
 
-  registerNewStudent(newStudent: INewStudent) {
+  public registerNewStudent(newStudent: INewStudent) {
     const student = this._basicStudent.createBasicStudentInfo(newStudent);
     // console.log("NEW REGISTERED STUDENT = ", student);
     return student;
   }
 
-  async lookUpByLastName(lastName: string) {
-    const qConfig = { ...HP_CONFIG.API_HEADERS };
+  public async lookUpByLastName(lastName: string, injectHtml?: boolean, idToInject?: string) {
+    // const qConfig = { ...HP_CONFIG.API_HEADERS };
+
+    // TODO: if injectHtml is true => inject response with id provided via idToInject
     // query to call:
-    const q = {
+    const q: IQuery = {
       query: `
       query FindStudentByLastName {
         hp_characters(where: {lastName: {_eq: "${lastName}"}}) {
@@ -72,7 +78,8 @@ class MinistryOfEducationController {
 
     // query gql
     try {
-      const result = await axios.post(HP_CONFIG.API_URL, q, qConfig )
+      // const result = await axios.post(HP_CONFIG.API_URL, q, qConfig );
+      const result = await gQlGetterService(q);
       const newResult = await this._parseResponse(result);
       // inject html here:
       const finalResult = await this._injectResponse(newResult);
