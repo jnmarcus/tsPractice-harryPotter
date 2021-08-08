@@ -35,7 +35,7 @@ class MinistryOfEducationController {
 
   private async _parseResponse(result: any) {
     this._gqlResponse = {};
-    console.log('RESULT = ', result);
+    // console.log('RESULT = ', result);
     this._gqlResponse = result;
     console.log('GQL RESPONSE = ', this._gqlResponse);
   }
@@ -48,7 +48,7 @@ class MinistryOfEducationController {
 
   registerNewStudent(newStudent: INewStudent) {
     const student = this._basicStudent.createBasicStudentInfo(newStudent);
-    console.log("NEW REGISTERED STUDENT = ", student);
+    // console.log("NEW REGISTERED STUDENT = ", student);
     return student;
   }
 

@@ -16,8 +16,8 @@ export class Student {
     let queriedResult: Course[] = [{ ...mockCourse() }];
 
     // Javier: which method is preferred?
-    console.log("COURSE FACTORY = ", courseFactory().getCourse1());
-    console.log("QUERIED RESULT = ", mockCourse(), termYear);
+    // console.log("COURSE FACTORY = ", courseFactory().getCourse1());
+    // console.log("QUERIED RESULT = ", mockCourse(), termYear);
     return queriedResult;
   }
 }

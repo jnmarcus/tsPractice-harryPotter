@@ -26,79 +26,20 @@ const hermioneCourses = hermioneGranger.getAllRegisteredCourses("2019");
 const createHarryPotter = ministryOfEducationController().harryPotter();
 
 const mockNewStudent = new MockStudent().mockNewStudent();
-console.log("MOCK NEW STUDENT = ", mockNewStudent);
+// console.log("MOCK NEW STUDENT = ", mockNewStudent);
 
 controller.registerNewStudent(mockNewStudent);
 controller.lookUpByLastName('Potter');
 
-// let myFuncResponse: {};
-//
-// const myData = {
-//   query: `
-//       query FindStudentByLastName {
-//         hp_characters(where: {lastName: {_eq: "Potter"}}) {
-//           firstName
-//           date_created
-//           house
-//           id
-//           lastName
-//           role
-//         }
-//       }
-//       `
+// const testLooker = async () => {
+//   // NOTE: works, but for now this writes over Harry Data (injects to same html id)
+//   const l = await controller.lookUpByLastName('Weasley');
+//   return l;
 // };
-// const myConfig = {
-//   headers: {
-//     "Content-Type": "application/json"
-//   }
-// }
-//
-// function failureCallback(error: any) {
-//   console.error('OOPS', error)
-// }
-//
-// async function setResult(result: any) {
-//   myFuncResponse = {};
-//   console.log('RESULT = ', result);
-//   myFuncResponse = result;
-//   console.log('MY FUNC RESPONSE = ', myFuncResponse);
-// }
-//
-// async function doThirdThing(newResult: any) {
-//   document.getElementById("app").innerHTML = `
-// <h1>Hello Parcel!</h1>
-// <div>
-//   Look
-//   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>
-//   for more info about Parcel.
-// </div>
-//
-// <pre>${JSON.stringify(hermioneCourses)}</pre>
-// <pre>${JSON.stringify(createHarryPotter)}</pre>
-// <pre>${JSON.stringify(myFuncResponse.data.data.hp_characters[0])}</pre>
-// `;
-// }
-//
-// async function myFunc(){
-//   try {
-//     // const result = await doSomething(); // call axios
-//     const result = await axios.post(URL, myData, myConfig )
-//     // const newResult = await doSomethingElse(result); // set myFuncResponse = result
-//     const newResult = await setResult(result);
-//     const finalResult = await doThirdThing(newResult);
-//     // console.log(`Got the final result: ${finalResult}`);
-//     console.log(`Got the final result: ${JSON.stringify(myFuncResponse.data.data.hp_characters[0])}`);
-//     // return JSON.stringify(myFuncResponse.data.data.hp_characters[0]);
-//     // return myFuncResponse.data.data.hp_characters[0];
-//   } catch(error) {
-//     failureCallback(error);
-//   }
-// }
-//
-// myFunc();
 
 
 // _____________________________________________________________
+// @ts-ignore
 document.getElementById("app").innerHTML = `
 <h1>Hello Parcel!</h1>
 <div>
