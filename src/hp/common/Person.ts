@@ -8,6 +8,7 @@ interface INewPerson {
   firstName: string;
   lastName: string;
   birthday?: Date;
+  species: "human";
 }
 
 interface IQueryParams {
@@ -23,6 +24,7 @@ export class Person {
   }
 
   getBasicPersonInfo(valueToSearchBy: IQueryParams): IPerson[] {
+    //  look up a person by a specified property and its corresponding value.
     const arr = hasura.hp_characters;
     const matches = arr.filter(keyValueMatcher(valueToSearchBy));
     // console.log("HASURA = ", matches);

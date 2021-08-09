@@ -3,6 +3,7 @@ export interface IPerson {
   firstName: string;
   lastName: string;
   birthday?: Date;
+  species: "human";
 }
 
 export interface Address {

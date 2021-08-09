@@ -1,6 +1,7 @@
 import faker from "faker";
 // import { mockCourse } from "./hp/mockData/mockCourse";
 import ministryOfEducationController from "./hp/ministryOfEducationController";
+import { MockPerson } from "./hp/mockData/MockPerson";
 
 import { Student } from "./hp/student";
 import { Person } from "./hp/common/Person";
@@ -15,12 +16,12 @@ const createHarryPotter = ministryOfEducationController().harryPotter();
 const searchObj = {
   lastName: "Weasley"
 };
-const person = new Person();
-console.log(person.getBasicPersonInfo(searchObj));
+
+console.log(new Person().getBasicPersonInfo(searchObj));
+console.log(new MockPerson());
 
 // won't work unless you create a static method
 // const harryPotterClasses = Student.getAllRegisteredCourses('2019')
-
 
 // _____________________________________________________________
 document.getElementById("app").innerHTML = `

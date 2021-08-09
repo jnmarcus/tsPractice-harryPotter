@@ -32,3 +32,5 @@ export interface DetailedStudent extends BasicStudent {
 export interface VerboseStudent {
   // all student interfaces (implements? extends?)
 }
+
+
