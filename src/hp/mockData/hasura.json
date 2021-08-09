@@ -1,0 +1,69 @@
+{
+  "data": {
+    "hp_characters": [
+      {
+        "firstName": "Harry",
+        "house": "Gryffindor",
+        "id": 1,
+        "lastName": "Potter",
+        "role": "student"
+      },
+      {
+        "firstName": "Draco",
+        "house": "Slytherin",
+        "id": 2,
+        "lastName": "Malfoy",
+        "role": "student"
+      },
+      {
+        "firstName": "Albus",
+        "house": "Gryffindor",
+        "id": 3,
+        "lastName": "Dumbledore",
+        "role": "professor"
+      },
+      {
+        "firstName": "Ginny",
+        "house": "Gryffindor",
+        "id": 4,
+        "lastName": "Weasley",
+        "role": "student"
+      },
+      {
+        "firstName": "Severus",
+        "house": "Slytherin",
+        "id": 5,
+        "lastName": "Snape",
+        "role": "professor"
+      },
+      {
+        "firstName": "Hermione",
+        "house": "Gryffindor",
+        "id": 6,
+        "lastName": "Granger",
+        "role": "student"
+      },
+      {
+        "firstName": "Cedric",
+        "house": "Hufflepuff",
+        "id": 7,
+        "lastName": "Diggory",
+        "role": "student"
+      },
+      {
+        "firstName": "Ron",
+        "house": "Gryffindor",
+        "id": 8,
+        "lastName": "Weasley",
+        "role": "student"
+      },
+      {
+        "firstName": "Luna",
+        "house": "ravenclaw",
+        "id": 9,
+        "lastName": "Lovegood",
+        "role": "student"
+      }
+    ]
+  }
+}

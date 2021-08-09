@@ -1,5 +1,4 @@
 import { mockCourse } from "./mockData/mockCourse";
-import courseFactory from "./courseFactory";
 
 interface Course {
   id: string;
@@ -8,6 +7,7 @@ interface Course {
 }
 // view model?
 export class Student {
+  createNewStudent(): {}
   getAllRegisteredCourses(termYear: string): Course[] {
     // query db: (GraphQL!)
     // const queriedResult: Course[] = () => {};
@@ -15,8 +15,6 @@ export class Student {
     // shallow copy of mockCourse:
     let queriedResult: Course[] = [{ ...mockCourse() }];
 
-    // Javier: which method is preferred?
-    console.log("COURSE FACTORY = ", courseFactory().getCourse1());
     console.log("QUERIED RESULT = ", mockCourse(), termYear);
     return queriedResult;
   }

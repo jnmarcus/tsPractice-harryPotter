@@ -2,7 +2,7 @@ import faker from "faker";
 
 interface CourseMeta {
   id: string;
-  name: string;
+  courseName: string;
   // name(): string;
   professor: string;
   // professor(): string;
@@ -37,7 +37,7 @@ const mockCourse = (): CourseMeta => {
 
   return {
     id: faker.datatype.uuid(),
-    name: mockCourseName(),
+    courseName: mockCourseName(),
     professor: mockFullName()
     // prerequisites: Course.getPreReqs()
   };

@@ -1,8 +1,8 @@
-export interface Person {
-  personId(): string;
+export interface IPerson {
+  personId: string;
   firstName: string;
   lastName: string;
-  birthday: Date;
+  birthday?: Date;
 }
 
 export interface Address {
