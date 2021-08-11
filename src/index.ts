@@ -6,7 +6,7 @@ import ministryOfEducationController from "./hp/ministryOfEducationController";
 import { MockPerson } from "./hp/mockData/MockPerson";
 
 import { Student } from "./hp/student";
-import { Person } from "./hp/common/Person";
+import { getBasicPersonInfo } from "./hp/common/genericPersonFunctions";
 
 // const myCourse = mockCourse();
 
@@ -19,7 +19,7 @@ const searchObj = {
   lastName: "Weasley"
 };
 
-console.log(new Person().getBasicPersonInfo(searchObj));
+console.log(getBasicPersonInfo(searchObj));
 console.log(new MockPerson());
 
 // won't work unless you create a static method
