@@ -1,4 +1,6 @@
 import faker from "faker";
+import './hp/scss/custom.scss';
+
 // import { mockCourse } from "./hp/mockData/mockCourse";
 import ministryOfEducationController from "./hp/ministryOfEducationController";
 import { MockPerson } from "./hp/mockData/MockPerson";
@@ -24,8 +26,9 @@ console.log(new MockPerson());
 // const harryPotterClasses = Student.getAllRegisteredCourses('2019')
 
 // _____________________________________________________________
+// @ts-ignore
 document.getElementById("app").innerHTML = `
-<h1>Hello Parcel!</h1>
+<h1 class="test">Hello Parcel!</h1>
 <div>
   Look
   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>
