@@ -12,7 +12,7 @@ interface INewPerson {
 }
 
 interface IQueryParams {
-  string: string | Date;
+  [k: string]: string | Date;
 }
 
 export class Person {
