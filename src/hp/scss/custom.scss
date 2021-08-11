@@ -1,3 +1,14 @@
-.test {
-  color: blueviolet;
+@import "vendorImports";
+
+pre {
+  background: $color-contrast-light;
 }
+
+.main {
+  padding: 20px;
+}
+
+
+
+// TODO: add PurgeCSS
+// https://github.com/twbs/bootstrap-npm-starter
